@@ -1,5 +1,5 @@
 {
-  "name": "pgexplainviz",
+  "name": "react-pg-explain",
   "version": "0.0.1",
   "description": "postgres explain plan visualization",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "author": "",
+  "author": "Maciek Sakrejda & Lukas Fittl",
   "license": "ISC",
   "dependencies": {
     "react": "^16.8.6"
