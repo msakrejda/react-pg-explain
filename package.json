@@ -9,7 +9,7 @@
     "build-storybook": "build-storybook"
   },
   "author": "Maciek Sakrejda & Lukas Fittl",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "react": "^16.8.6"
   },
