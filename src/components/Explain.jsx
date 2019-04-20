@@ -19,7 +19,7 @@ function NodeDetails ({details, onClose}) {
     onClose()
   }
   const { 'Node Type': nodeType, ...rest } = details
-  return <div style={{position: 'absolute', top: 0, left: 0, right: 0, backgroundColor: 'white', borderWidth: 1}}>
+  return <div style={{backgroundColor: 'white', borderWidth: 1}}>
     <a href='#' onClick={handleClose}>x</a>
     <strong>{nodeType}</strong>
     <dl>
@@ -46,11 +46,16 @@ function Node ({ node, annotations }) {
   const toggleExpand = () => expand(expanded => !expanded)
 
   const myAnnotations = annotations[node.__location] || []
+  const relName = rest['Relation Name']
+  const nodeType = rest['Node Type']
+  const heading = relName ? `${nodeType} on ${relName}` : nodeType
+  const width = expanded ? 600 : 300
   return (
     <div style={style}>
-      {expanded && <NodeDetails details={rest} onClose={toggleExpand} />}
-      <div onClick={toggleExpand} style={{borderWidth: 1, borderColor: 'red', maxWidth: 200, padding: '4px'}}>
-        <strong>{rest['Node Type']}</strong>
+      <div onClick={toggleExpand} style={{borderWidth: 1, borderColor: 'red', maxWidth: width, padding: '4px'}}>
+        <div style={{fontWeight: 'bold', textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden'}} title={heading}>{heading}</div>
+        <div>cost: {rest['Startup Cost']}...{rest['Total Cost']}</div>
+        {expanded && <NodeDetails details={rest} onClose={toggleExpand} />}
         {myAnnotations.map((a) => {
           return <div>{a}</div>
         })}
