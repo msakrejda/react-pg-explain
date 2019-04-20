@@ -18,10 +18,10 @@ function NodeDetails ({details, onClose}) {
     e.preventDefault()
     onClose()
   }
-  const { 'Node Type': nodeName, ...rest } = details
+  const { 'Node Type': nodeType, ...rest } = details
   return <div style={{position: 'absolute', top: 0, left: 0, right: 0, backgroundColor: 'white', borderWidth: 1}}>
     <a href='#' onClick={handleClose}>x</a>
-    <strong>{nodeName}</strong>
+    <strong>{nodeType}</strong>
     <dl>
       {Object.entries(rest).map(([key, value]) => {
         return <>
@@ -30,8 +30,7 @@ function NodeDetails ({details, onClose}) {
         </>
       })}
     </dl>
-    <pre>{JSON.stringify(details, null, 2)}</pre>
-  </div> 
+  </div>
 }
 
 function Node ({ node, annotations }) {
