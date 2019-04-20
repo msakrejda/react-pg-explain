@@ -1,0 +1,11 @@
+* export correctly
+* styling
+ - make it look less bad
+ - class-based styling? how does that work in libraries?
+ - customizable styling
+* should cost (or other attributes) always be present
+* more explicit action to collapse nodes (so we can copy from node detail text)
+* figure out huge index conds / other huge detail values (show subset, expandable)
+* show index names in summary view
+* draw lines to connect nodes
+* add tests / storyshots / webpack
