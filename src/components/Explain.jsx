@@ -36,11 +36,7 @@ function NodeDetails ({details, onClose}) {
 function Node ({ node, annotations }) {
   const { Plans, ...rest } = node
   const style = {
-    padding: 20,
-    flexGrow: 1,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
+    padding: '8px 32px',
   }
   if (debug) {
     style.borderWidth = 1
@@ -53,13 +49,13 @@ function Node ({ node, annotations }) {
   return (
     <div style={style}>
       {expanded && <NodeDetails details={rest} onClose={toggleExpand} />}
-      <div onClick={toggleExpand} style={{borderWidth: 1, borderColor: 'red', maxWidth: 200, margin: '0 auto', textAlign: 'center', padding: '10px 0px'}}>
+      <div onClick={toggleExpand} style={{borderWidth: 1, borderColor: 'red', maxWidth: 200, padding: '4px'}}>
         <strong>{rest['Node Type']}</strong>
         {myAnnotations.map((a) => {
           return <div>{a}</div>
         })}
       </div>
-      <div style={{display: 'flex'}}>
+      <div>
         {Plans && Plans.map((p) => {
           return <Node node={p} annotations={annotations} />
         })}
