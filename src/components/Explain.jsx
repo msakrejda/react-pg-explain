@@ -13,20 +13,13 @@ export function addLocations (node, currLocation=[0]) {
   })
 }
 
-function NodeDetails ({details, onClose}) {
-  function handleClose (e) {
-    e.preventDefault()
-    onClose()
-  }
-  const { 'Node Type': nodeType, ...rest } = details
+function NodeDetails ({details}) {
   return <div style={{backgroundColor: 'white', borderWidth: 1}}>
-    <a href='#' onClick={handleClose}>x</a>
-    <strong>{nodeType}</strong>
     <dl>
-      {Object.entries(rest).map(([key, value]) => {
+      {Object.entries(details).filter(([key]) => !key.startsWith('__')).map(([key, value]) => {
         return <>
-          <dt>{key}</dt>
-          <dd>{value}</dd>
+          <dt style={{fontWeight: 'bold', fontFamily: 'monospace'}}>{key}</dt>
+          <dd style={{marginLeft: '10px', fontFamily: 'monospace'}}>{value}</dd>
         </>
       })}
     </dl>
@@ -37,6 +30,7 @@ function Node ({ node, annotations }) {
   const { Plans, ...rest } = node
   const style = {
     padding: '8px 32px',
+    fontFamily: 'sans-serif'
   }
   if (debug) {
     style.borderWidth = 1
@@ -52,10 +46,10 @@ function Node ({ node, annotations }) {
   const width = expanded ? 600 : 300
   return (
     <div style={style}>
-      <div onClick={toggleExpand} style={{borderWidth: 1, borderColor: 'red', maxWidth: width, padding: '4px'}}>
+      <div onClick={toggleExpand} style={{borderWidth: 1, borderStyle: 'solid', borderColor: 'red', maxWidth: width, padding: '4px'}}>
         <div style={{fontWeight: 'bold', textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden'}} title={heading}>{heading}</div>
         <div>cost: {rest['Startup Cost']}...{rest['Total Cost']}</div>
-        {expanded && <NodeDetails details={rest} onClose={toggleExpand} />}
+        {expanded && <NodeDetails details={rest} />}
         {myAnnotations.map((a) => {
           return <div>{a}</div>
         })}
