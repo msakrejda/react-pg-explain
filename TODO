@@ -9,3 +9,4 @@
 * show index names in summary view
 * draw lines to connect nodes
 * add tests / storyshots / webpack
+* see if moving to a react library template buys us anything
