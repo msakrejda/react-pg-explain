@@ -267,10 +267,19 @@ const thePlan = [
   }
 ]
 
-storiesOf('Explain', module)
-  .add('default', () => {
+const stories = storiesOf('Explain', module)
+
+const plans = {
+  thePlan,
+  theBigPlan,
+  theInterestingPlan,
+}
+
+Object.entries(plans).forEach(([name, plan]) => {
+  stories.add(`${name}`, () => {
     const annotations = new Map()
     annotations[[0,0,0,1]] = [ 'this is expensive' ]
-    addLocations(theInterestingPlan[0].Plan)
-    return <Explain plan={theInterestingPlan} annotations={annotations} />
+    addLocations(plan[0].Plan)
+    return <Explain plan={plan} annotations={annotations} />
   })
+})
