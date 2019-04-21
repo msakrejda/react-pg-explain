@@ -10,3 +10,4 @@
 * draw lines to connect nodes
 * add tests / storyshots / webpack
 * see if moving to a react library template buys us anything
+ - https://www.npmjs.com/package/create-react-library ?
