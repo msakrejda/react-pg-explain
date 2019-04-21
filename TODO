@@ -1,4 +1,5 @@
 * export correctly
+ - https://github.com/rollup/rollup ?
 * styling
  - make it look less bad
  - class-based styling? how does that work in libraries?
@@ -8,6 +9,6 @@
 * figure out huge index conds / other huge detail values (show subset, expandable)
 * show index names in summary view
 * draw lines to connect nodes
-* add tests / storyshots / webpack
+* add non-storyshot tests (e.g. simulating interaction)
 * see if moving to a react library template buys us anything
  - https://www.npmjs.com/package/create-react-library ?
