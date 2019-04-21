@@ -1,3 +1,7 @@
-import initStoryshots from '@storybook/addon-storyshots';
+import initStoryshots from '@storybook/addon-storyshots'
 
-initStoryshots({ /* configuration options */ });
+import registerRequireContextHook from 'babel-plugin-require-context-hook/register'
+
+registerRequireContextHook();
+
+initStoryshots({ /* configuration options */ })
