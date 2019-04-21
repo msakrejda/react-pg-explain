@@ -18,8 +18,8 @@ function NodeDetails ({details}) {
     <dl>
       {Object.entries(details).filter(([key]) => !key.startsWith('__')).map(([key, value]) => {
         return <>
-          <dt style={{fontWeight: 'bold', fontFamily: 'monospace'}}>{key}</dt>
-          <dd style={{marginLeft: '10px', fontFamily: 'monospace'}}>{value}</dd>
+          <dt key={`dt-${key}`} style={{fontWeight: 'bold', fontFamily: 'monospace'}}>{key}</dt>
+          <dd key={`dd-${key}`} style={{marginLeft: '10px', fontFamily: 'monospace'}}>{value}</dd>
         </>
       })}
     </dl>
@@ -50,13 +50,13 @@ function Node ({ node, annotations }) {
         <div style={{fontWeight: 'bold', textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden'}} title={heading}>{heading}</div>
         <div>cost: {rest['Startup Cost']}...{rest['Total Cost']}</div>
         {expanded && <NodeDetails details={rest} />}
-        {myAnnotations.map((a) => {
-          return <div>{a}</div>
+        {myAnnotations.map((a, index) => {
+          return <div key={index}>{a}</div>
         })}
       </div>
       <div>
-        {Plans && Plans.map((p) => {
-          return <Node node={p} annotations={annotations} />
+        {Plans && Plans.map((p, index) => {
+          return <Node key={index} node={p} annotations={annotations} />
         })}
       </div>
     </div>

@@ -1,0 +1,1360 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Explain theBigPlan 1`] = `
+<div
+  style={
+    Object {
+      "overflow": "scroll",
+      "position": "relative",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "fontFamily": "sans-serif",
+        "padding": "8px 32px",
+      }
+    }
+  >
+    <div
+      onClick={[Function]}
+      style={
+        Object {
+          "borderColor": "red",
+          "borderStyle": "solid",
+          "borderWidth": 1,
+          "maxWidth": 300,
+          "padding": "4px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "fontWeight": "bold",
+            "overflow": "hidden",
+            "textOverflow": "ellipsis",
+            "whiteSpace": "nowrap",
+          }
+        }
+        title="Append"
+      >
+        Append
+      </div>
+      <div>
+        cost: 
+        0.42
+        ...
+        310617.32
+      </div>
+    </div>
+    <div>
+      <div
+        style={
+          Object {
+            "fontFamily": "sans-serif",
+            "padding": "8px 32px",
+          }
+        }
+      >
+        <div
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "red",
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "maxWidth": 300,
+              "padding": "4px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "fontWeight": "bold",
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+              }
+            }
+            title="Index Scan on vacuum_run_stats_7d_20190317"
+          >
+            Index Scan on vacuum_run_stats_7d_20190317
+          </div>
+          <div>
+            cost: 
+            0.42
+            ...
+            31590.64
+          </div>
+        </div>
+        <div />
+      </div>
+      <div
+        style={
+          Object {
+            "fontFamily": "sans-serif",
+            "padding": "8px 32px",
+          }
+        }
+      >
+        <div
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "red",
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "maxWidth": 300,
+              "padding": "4px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "fontWeight": "bold",
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+              }
+            }
+            title="Index Scan on vacuum_run_stats_7d_20190318"
+          >
+            Index Scan on vacuum_run_stats_7d_20190318
+          </div>
+          <div>
+            cost: 
+            0.42
+            ...
+            47509.74
+          </div>
+        </div>
+        <div />
+      </div>
+      <div
+        style={
+          Object {
+            "fontFamily": "sans-serif",
+            "padding": "8px 32px",
+          }
+        }
+      >
+        <div
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "red",
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "maxWidth": 300,
+              "padding": "4px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "fontWeight": "bold",
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+              }
+            }
+            title="Index Scan on vacuum_run_stats_7d_20190319"
+          >
+            Index Scan on vacuum_run_stats_7d_20190319
+          </div>
+          <div>
+            cost: 
+            0.42
+            ...
+            48232.77
+          </div>
+          <div>
+            this is expensive: 48232.77
+          </div>
+        </div>
+        <div />
+      </div>
+      <div
+        style={
+          Object {
+            "fontFamily": "sans-serif",
+            "padding": "8px 32px",
+          }
+        }
+      >
+        <div
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "red",
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "maxWidth": 300,
+              "padding": "4px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "fontWeight": "bold",
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+              }
+            }
+            title="Index Scan on vacuum_run_stats_7d_20190320"
+          >
+            Index Scan on vacuum_run_stats_7d_20190320
+          </div>
+          <div>
+            cost: 
+            0.42
+            ...
+            46897.39
+          </div>
+        </div>
+        <div />
+      </div>
+      <div
+        style={
+          Object {
+            "fontFamily": "sans-serif",
+            "padding": "8px 32px",
+          }
+        }
+      >
+        <div
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "red",
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "maxWidth": 300,
+              "padding": "4px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "fontWeight": "bold",
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+              }
+            }
+            title="Index Scan on vacuum_run_stats_7d_20190321"
+          >
+            Index Scan on vacuum_run_stats_7d_20190321
+          </div>
+          <div>
+            cost: 
+            0.42
+            ...
+            34507.77
+          </div>
+        </div>
+        <div />
+      </div>
+      <div
+        style={
+          Object {
+            "fontFamily": "sans-serif",
+            "padding": "8px 32px",
+          }
+        }
+      >
+        <div
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "red",
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "maxWidth": 300,
+              "padding": "4px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "fontWeight": "bold",
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+              }
+            }
+            title="Index Scan on vacuum_run_stats_7d_20190322"
+          >
+            Index Scan on vacuum_run_stats_7d_20190322
+          </div>
+          <div>
+            cost: 
+            0.42
+            ...
+            34834.04
+          </div>
+        </div>
+        <div />
+      </div>
+      <div
+        style={
+          Object {
+            "fontFamily": "sans-serif",
+            "padding": "8px 32px",
+          }
+        }
+      >
+        <div
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "red",
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "maxWidth": 300,
+              "padding": "4px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "fontWeight": "bold",
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+              }
+            }
+            title="Index Scan on vacuum_run_stats_7d_20190323"
+          >
+            Index Scan on vacuum_run_stats_7d_20190323
+          </div>
+          <div>
+            cost: 
+            0.42
+            ...
+            29450.41
+          </div>
+        </div>
+        <div />
+      </div>
+      <div
+        style={
+          Object {
+            "fontFamily": "sans-serif",
+            "padding": "8px 32px",
+          }
+        }
+      >
+        <div
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "red",
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "maxWidth": 300,
+              "padding": "4px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "fontWeight": "bold",
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+              }
+            }
+            title="Index Scan on vacuum_run_stats_7d_20190324"
+          >
+            Index Scan on vacuum_run_stats_7d_20190324
+          </div>
+          <div>
+            cost: 
+            0.42
+            ...
+            37594.57
+          </div>
+        </div>
+        <div />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Explain theInterestingPlan 1`] = `
+<div
+  style={
+    Object {
+      "overflow": "scroll",
+      "position": "relative",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "fontFamily": "sans-serif",
+        "padding": "8px 32px",
+      }
+    }
+  >
+    <div
+      onClick={[Function]}
+      style={
+        Object {
+          "borderColor": "red",
+          "borderStyle": "solid",
+          "borderWidth": 1,
+          "maxWidth": 300,
+          "padding": "4px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "fontWeight": "bold",
+            "overflow": "hidden",
+            "textOverflow": "ellipsis",
+            "whiteSpace": "nowrap",
+          }
+        }
+        title="Limit"
+      >
+        Limit
+      </div>
+      <div>
+        cost: 
+        18152.5
+        ...
+        18152.52
+      </div>
+    </div>
+    <div>
+      <div
+        style={
+          Object {
+            "fontFamily": "sans-serif",
+            "padding": "8px 32px",
+          }
+        }
+      >
+        <div
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "red",
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "maxWidth": 300,
+              "padding": "4px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "fontWeight": "bold",
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+              }
+            }
+            title="Sort"
+          >
+            Sort
+          </div>
+          <div>
+            cost: 
+            18152.5
+            ...
+            18152.52
+          </div>
+        </div>
+        <div>
+          <div
+            style={
+              Object {
+                "fontFamily": "sans-serif",
+                "padding": "8px 32px",
+              }
+            }
+          >
+            <div
+              onClick={[Function]}
+              style={
+                Object {
+                  "borderColor": "red",
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "maxWidth": 300,
+                  "padding": "4px",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "fontWeight": "bold",
+                    "overflow": "hidden",
+                    "textOverflow": "ellipsis",
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                title="Append"
+              >
+                Append
+              </div>
+              <div>
+                cost: 
+                0.56
+                ...
+                18152.38
+              </div>
+            </div>
+            <div>
+              <div
+                style={
+                  Object {
+                    "fontFamily": "sans-serif",
+                    "padding": "8px 32px",
+                  }
+                }
+              >
+                <div
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "borderColor": "red",
+                      "borderStyle": "solid",
+                      "borderWidth": 1,
+                      "maxWidth": 300,
+                      "padding": "4px",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "fontWeight": "bold",
+                        "overflow": "hidden",
+                        "textOverflow": "ellipsis",
+                        "whiteSpace": "nowrap",
+                      }
+                    }
+                    title="Index Scan on log_lines_30d_20190307"
+                  >
+                    Index Scan on log_lines_30d_20190307
+                  </div>
+                  <div>
+                    cost: 
+                    0.56
+                    ...
+                    411.11
+                  </div>
+                </div>
+                <div />
+              </div>
+              <div
+                style={
+                  Object {
+                    "fontFamily": "sans-serif",
+                    "padding": "8px 32px",
+                  }
+                }
+              >
+                <div
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "borderColor": "red",
+                      "borderStyle": "solid",
+                      "borderWidth": 1,
+                      "maxWidth": 300,
+                      "padding": "4px",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "fontWeight": "bold",
+                        "overflow": "hidden",
+                        "textOverflow": "ellipsis",
+                        "whiteSpace": "nowrap",
+                      }
+                    }
+                    title="Bitmap Heap Scan on log_lines_30d_20190308"
+                  >
+                    Bitmap Heap Scan on log_lines_30d_20190308
+                  </div>
+                  <div>
+                    cost: 
+                    80.29
+                    ...
+                    4974.4
+                  </div>
+                  <div>
+                    this is expensive: 4894.11
+                  </div>
+                </div>
+                <div>
+                  <div
+                    style={
+                      Object {
+                        "fontFamily": "sans-serif",
+                        "padding": "8px 32px",
+                      }
+                    }
+                  >
+                    <div
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "borderColor": "red",
+                          "borderStyle": "solid",
+                          "borderWidth": 1,
+                          "maxWidth": 300,
+                          "padding": "4px",
+                        }
+                      }
+                    >
+                      <div
+                        style={
+                          Object {
+                            "fontWeight": "bold",
+                            "overflow": "hidden",
+                            "textOverflow": "ellipsis",
+                            "whiteSpace": "nowrap",
+                          }
+                        }
+                        title="Bitmap Index Scan"
+                      >
+                        Bitmap Index Scan
+                      </div>
+                      <div>
+                        cost: 
+                        0
+                        ...
+                        80.29
+                      </div>
+                    </div>
+                    <div />
+                  </div>
+                </div>
+              </div>
+              <div
+                style={
+                  Object {
+                    "fontFamily": "sans-serif",
+                    "padding": "8px 32px",
+                  }
+                }
+              >
+                <div
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "borderColor": "red",
+                      "borderStyle": "solid",
+                      "borderWidth": 1,
+                      "maxWidth": 300,
+                      "padding": "4px",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "fontWeight": "bold",
+                        "overflow": "hidden",
+                        "textOverflow": "ellipsis",
+                        "whiteSpace": "nowrap",
+                      }
+                    }
+                    title="Index Scan on log_lines_30d_20190309"
+                  >
+                    Index Scan on log_lines_30d_20190309
+                  </div>
+                  <div>
+                    cost: 
+                    0.56
+                    ...
+                    8.59
+                  </div>
+                </div>
+                <div />
+              </div>
+              <div
+                style={
+                  Object {
+                    "fontFamily": "sans-serif",
+                    "padding": "8px 32px",
+                  }
+                }
+              >
+                <div
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "borderColor": "red",
+                      "borderStyle": "solid",
+                      "borderWidth": 1,
+                      "maxWidth": 300,
+                      "padding": "4px",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "fontWeight": "bold",
+                        "overflow": "hidden",
+                        "textOverflow": "ellipsis",
+                        "whiteSpace": "nowrap",
+                      }
+                    }
+                    title="Bitmap Heap Scan on log_lines_30d_20190310"
+                  >
+                    Bitmap Heap Scan on log_lines_30d_20190310
+                  </div>
+                  <div>
+                    cost: 
+                    75.18
+                    ...
+                    4632.63
+                  </div>
+                </div>
+                <div>
+                  <div
+                    style={
+                      Object {
+                        "fontFamily": "sans-serif",
+                        "padding": "8px 32px",
+                      }
+                    }
+                  >
+                    <div
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "borderColor": "red",
+                          "borderStyle": "solid",
+                          "borderWidth": 1,
+                          "maxWidth": 300,
+                          "padding": "4px",
+                        }
+                      }
+                    >
+                      <div
+                        style={
+                          Object {
+                            "fontWeight": "bold",
+                            "overflow": "hidden",
+                            "textOverflow": "ellipsis",
+                            "whiteSpace": "nowrap",
+                          }
+                        }
+                        title="Bitmap Index Scan"
+                      >
+                        Bitmap Index Scan
+                      </div>
+                      <div>
+                        cost: 
+                        0
+                        ...
+                        75.17
+                      </div>
+                    </div>
+                    <div />
+                  </div>
+                </div>
+              </div>
+              <div
+                style={
+                  Object {
+                    "fontFamily": "sans-serif",
+                    "padding": "8px 32px",
+                  }
+                }
+              >
+                <div
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "borderColor": "red",
+                      "borderStyle": "solid",
+                      "borderWidth": 1,
+                      "maxWidth": 300,
+                      "padding": "4px",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "fontWeight": "bold",
+                        "overflow": "hidden",
+                        "textOverflow": "ellipsis",
+                        "whiteSpace": "nowrap",
+                      }
+                    }
+                    title="Bitmap Heap Scan on log_lines_30d_20190311"
+                  >
+                    Bitmap Heap Scan on log_lines_30d_20190311
+                  </div>
+                  <div>
+                    cost: 
+                    75.15
+                    ...
+                    4626.44
+                  </div>
+                </div>
+                <div>
+                  <div
+                    style={
+                      Object {
+                        "fontFamily": "sans-serif",
+                        "padding": "8px 32px",
+                      }
+                    }
+                  >
+                    <div
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "borderColor": "red",
+                          "borderStyle": "solid",
+                          "borderWidth": 1,
+                          "maxWidth": 300,
+                          "padding": "4px",
+                        }
+                      }
+                    >
+                      <div
+                        style={
+                          Object {
+                            "fontWeight": "bold",
+                            "overflow": "hidden",
+                            "textOverflow": "ellipsis",
+                            "whiteSpace": "nowrap",
+                          }
+                        }
+                        title="Bitmap Index Scan"
+                      >
+                        Bitmap Index Scan
+                      </div>
+                      <div>
+                        cost: 
+                        0
+                        ...
+                        75.15
+                      </div>
+                    </div>
+                    <div />
+                  </div>
+                </div>
+              </div>
+              <div
+                style={
+                  Object {
+                    "fontFamily": "sans-serif",
+                    "padding": "8px 32px",
+                  }
+                }
+              >
+                <div
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "borderColor": "red",
+                      "borderStyle": "solid",
+                      "borderWidth": 1,
+                      "maxWidth": 300,
+                      "padding": "4px",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "fontWeight": "bold",
+                        "overflow": "hidden",
+                        "textOverflow": "ellipsis",
+                        "whiteSpace": "nowrap",
+                      }
+                    }
+                    title="Bitmap Heap Scan on log_lines_30d_20190312"
+                  >
+                    Bitmap Heap Scan on log_lines_30d_20190312
+                  </div>
+                  <div>
+                    cost: 
+                    55.5
+                    ...
+                    3482.04
+                  </div>
+                </div>
+                <div>
+                  <div
+                    style={
+                      Object {
+                        "fontFamily": "sans-serif",
+                        "padding": "8px 32px",
+                      }
+                    }
+                  >
+                    <div
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "borderColor": "red",
+                          "borderStyle": "solid",
+                          "borderWidth": 1,
+                          "maxWidth": 300,
+                          "padding": "4px",
+                        }
+                      }
+                    >
+                      <div
+                        style={
+                          Object {
+                            "fontWeight": "bold",
+                            "overflow": "hidden",
+                            "textOverflow": "ellipsis",
+                            "whiteSpace": "nowrap",
+                          }
+                        }
+                        title="Bitmap Index Scan"
+                      >
+                        Bitmap Index Scan
+                      </div>
+                      <div>
+                        cost: 
+                        0
+                        ...
+                        55.5
+                      </div>
+                    </div>
+                    <div />
+                  </div>
+                </div>
+              </div>
+              <div
+                style={
+                  Object {
+                    "fontFamily": "sans-serif",
+                    "padding": "8px 32px",
+                  }
+                }
+              >
+                <div
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "borderColor": "red",
+                      "borderStyle": "solid",
+                      "borderWidth": 1,
+                      "maxWidth": 300,
+                      "padding": "4px",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "fontWeight": "bold",
+                        "overflow": "hidden",
+                        "textOverflow": "ellipsis",
+                        "whiteSpace": "nowrap",
+                      }
+                    }
+                    title="Index Scan on log_lines_30d_20190313"
+                  >
+                    Index Scan on log_lines_30d_20190313
+                  </div>
+                  <div>
+                    cost: 
+                    0.56
+                    ...
+                    8.59
+                  </div>
+                </div>
+                <div />
+              </div>
+              <div
+                style={
+                  Object {
+                    "fontFamily": "sans-serif",
+                    "padding": "8px 32px",
+                  }
+                }
+              >
+                <div
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "borderColor": "red",
+                      "borderStyle": "solid",
+                      "borderWidth": 1,
+                      "maxWidth": 300,
+                      "padding": "4px",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "fontWeight": "bold",
+                        "overflow": "hidden",
+                        "textOverflow": "ellipsis",
+                        "whiteSpace": "nowrap",
+                      }
+                    }
+                    title="Index Scan on log_lines_30d_20190314"
+                  >
+                    Index Scan on log_lines_30d_20190314
+                  </div>
+                  <div>
+                    cost: 
+                    0.56
+                    ...
+                    8.58
+                  </div>
+                </div>
+                <div />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Explain thePlan 1`] = `
+<div
+  style={
+    Object {
+      "overflow": "scroll",
+      "position": "relative",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "fontFamily": "sans-serif",
+        "padding": "8px 32px",
+      }
+    }
+  >
+    <div
+      onClick={[Function]}
+      style={
+        Object {
+          "borderColor": "red",
+          "borderStyle": "solid",
+          "borderWidth": 1,
+          "maxWidth": 300,
+          "padding": "4px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "fontWeight": "bold",
+            "overflow": "hidden",
+            "textOverflow": "ellipsis",
+            "whiteSpace": "nowrap",
+          }
+        }
+        title="ModifyTable on queries"
+      >
+        ModifyTable on queries
+      </div>
+      <div>
+        cost: 
+        11909.31
+        ...
+        23292.87
+      </div>
+    </div>
+    <div>
+      <div
+        style={
+          Object {
+            "fontFamily": "sans-serif",
+            "padding": "8px 32px",
+          }
+        }
+      >
+        <div
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "red",
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "maxWidth": 300,
+              "padding": "4px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "fontWeight": "bold",
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+              }
+            }
+            title="Nested Loop"
+          >
+            Nested Loop
+          </div>
+          <div>
+            cost: 
+            11909.31
+            ...
+            23292.87
+          </div>
+        </div>
+        <div>
+          <div
+            style={
+              Object {
+                "fontFamily": "sans-serif",
+                "padding": "8px 32px",
+              }
+            }
+          >
+            <div
+              onClick={[Function]}
+              style={
+                Object {
+                  "borderColor": "red",
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "maxWidth": 300,
+                  "padding": "4px",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "fontWeight": "bold",
+                    "overflow": "hidden",
+                    "textOverflow": "ellipsis",
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                title="Nested Loop"
+              >
+                Nested Loop
+              </div>
+              <div>
+                cost: 
+                11908.74
+                ...
+                23286.55
+              </div>
+            </div>
+            <div>
+              <div
+                style={
+                  Object {
+                    "fontFamily": "sans-serif",
+                    "padding": "8px 32px",
+                  }
+                }
+              >
+                <div
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "borderColor": "red",
+                      "borderStyle": "solid",
+                      "borderWidth": 1,
+                      "maxWidth": 300,
+                      "padding": "4px",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "fontWeight": "bold",
+                        "overflow": "hidden",
+                        "textOverflow": "ellipsis",
+                        "whiteSpace": "nowrap",
+                      }
+                    }
+                    title="Bitmap Heap Scan on query_stats_2d_20190309"
+                  >
+                    Bitmap Heap Scan on query_stats_2d_20190309
+                  </div>
+                  <div>
+                    cost: 
+                    11908.05
+                    ...
+                    15303.61
+                  </div>
+                </div>
+                <div>
+                  <div
+                    style={
+                      Object {
+                        "fontFamily": "sans-serif",
+                        "padding": "8px 32px",
+                      }
+                    }
+                  >
+                    <div
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "borderColor": "red",
+                          "borderStyle": "solid",
+                          "borderWidth": 1,
+                          "maxWidth": 300,
+                          "padding": "4px",
+                        }
+                      }
+                    >
+                      <div
+                        style={
+                          Object {
+                            "fontWeight": "bold",
+                            "overflow": "hidden",
+                            "textOverflow": "ellipsis",
+                            "whiteSpace": "nowrap",
+                          }
+                        }
+                        title="Bitmap Index Scan"
+                      >
+                        Bitmap Index Scan
+                      </div>
+                      <div>
+                        cost: 
+                        0
+                        ...
+                        11907.82
+                      </div>
+                      <div>
+                        this is expensive: 11907.82
+                      </div>
+                    </div>
+                    <div />
+                  </div>
+                </div>
+              </div>
+              <div
+                style={
+                  Object {
+                    "fontFamily": "sans-serif",
+                    "padding": "8px 32px",
+                  }
+                }
+              >
+                <div
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "borderColor": "red",
+                      "borderStyle": "solid",
+                      "borderWidth": 1,
+                      "maxWidth": 300,
+                      "padding": "4px",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "fontWeight": "bold",
+                        "overflow": "hidden",
+                        "textOverflow": "ellipsis",
+                        "whiteSpace": "nowrap",
+                      }
+                    }
+                    title="Index Scan on query_fingerprints"
+                  >
+                    Index Scan on query_fingerprints
+                  </div>
+                  <div>
+                    cost: 
+                    0.69
+                    ...
+                    8.71
+                  </div>
+                </div>
+                <div />
+              </div>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "fontFamily": "sans-serif",
+                "padding": "8px 32px",
+              }
+            }
+          >
+            <div
+              onClick={[Function]}
+              style={
+                Object {
+                  "borderColor": "red",
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "maxWidth": 300,
+                  "padding": "4px",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "fontWeight": "bold",
+                    "overflow": "hidden",
+                    "textOverflow": "ellipsis",
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                title="Index Scan on queries"
+              >
+                Index Scan on queries
+              </div>
+              <div>
+                cost: 
+                0.57
+                ...
+                6.32
+              </div>
+            </div>
+            <div />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
