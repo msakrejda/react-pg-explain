@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
+import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
+import { linkTo } from '@storybook/addon-links'
 
 import Explain from '../src/components/Explain'
 import { addLocations } from '../src/components/Explain'
@@ -280,7 +280,6 @@ Object.entries(plans).forEach(([name, plan]) => {
   stories.add(`${name}`, () => {
     addLocations(plan[0].Plan)
     const annotations = findMostExpensiveByCost(plan)
-    //annotations[[0,0,0,1]] = [ 'this is expensive' ]
     return <Explain plan={plan} annotations={annotations} />
   })
 })
