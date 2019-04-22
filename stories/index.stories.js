@@ -1,10 +1,8 @@
 import React from 'react'
 
 import { storiesOf } from '@storybook/react'
-import { action } from '@storybook/addon-actions'
-import { linkTo } from '@storybook/addon-links'
 
-import Explain from '../src/components/Explain'
+import { Explain } from '../src/components/Explain'
 import { addLocations } from '../src/components/Explain'
 import { findMostExpensiveByCost } from '../src/lib/analyze'
 
