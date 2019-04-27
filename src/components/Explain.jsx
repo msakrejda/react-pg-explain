@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Object } from 'es6-shim';
 
 const debug = false
 
@@ -63,7 +62,7 @@ function Node ({ node, annotations }) {
   )
 }
 
-export default function Explain ({plan, annotations}) {
+export function Explain ({plan, annotations}) {
   return (
     <div style={{position: 'relative', overflow: 'scroll'}}>
       <Node node={plan[0].Plan} annotations={annotations}/>
