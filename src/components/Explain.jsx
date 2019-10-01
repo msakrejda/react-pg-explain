@@ -18,9 +18,17 @@ function Node ({ node, annotations, onNodeClick }) {
   const { Plans, ...rest } = node
 
   const myAnnotations = annotations[node.__location] || []
-  const relName = rest['Relation Name']
   const nodeType = rest['Node Type']
-  const heading = relName ? `${nodeType} on ${relName}` : nodeType
+
+  const relName = rest['Relation Name']
+  const relSchema = rest['Schema']
+  const relAlias = rest['Alias']
+  const relInfo = relName && (
+    <div style={{fontSize: '0.8rem', paddingLeft: '12px', textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden'}} title={nodeType}>
+      on <span style={{color: 'green'}}>{relSchema}</span>.<span style={{color: 'green'}}>{relName}</span> AS <span style={{color: 'blue'}}>{relAlias}</span>
+    </div>
+  )
+
   const handleNodeClick = () => {
     onNodeClick(node)
   }
@@ -34,10 +42,12 @@ function Node ({ node, annotations, onNodeClick }) {
         borderStyle: 'solid',
         borderColor: 'brown',
         borderRadius: '5px',
+        backgroundColor: 'snow',
         maxWidth: 300,
         padding: '4px'
         }}>
-        <div style={{fontWeight: 'bold', textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden'}} title={heading}>{heading}</div>
+        <div style={{fontWeight: 'bold', textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden'}} title={nodeType}>{nodeType}</div>
+        {relInfo}
         <div>cost: {rest['Startup Cost']}...{rest['Total Cost']}</div>
         {myAnnotations.map((a, index) => {
           return <div key={index}>{a}</div>
@@ -116,14 +126,13 @@ export function ExplainPlanOverview ({plan, annotations}) {
   const handleNodeClick = (node) => {
     setSelectedNode(node)
   }
-  const { Plans, ...rest } = selectedNode
-  let nodeDetails = rest
+  const { Plans, ...nodeDetails } = selectedNode
 
   return (
     <div style={{display: 'flex'}}>
       <Explain plan={plan} annotations={annotations} onNodeClick={handleNodeClick} />
       <div>
-        {nodeDetails && <NodeDetails details={nodeDetails} />}
+        <NodeDetails details={nodeDetails} />
       </div>
     </div>
   )
@@ -137,7 +146,11 @@ function NodeDetails ({details}) {
     }}>
     <dl>
       {Object.entries(details).filter(([key]) => !key.startsWith('__')).map(([key, value]) => {
-        const displayValue = Array.isArray(value) ? value.join(', ') : value
+        const displayValue = Array.isArray(value)
+          ? value.join(', ')
+          : value === false || value === true
+          ? String(value)
+          : value
         return <>
           <dt key={`dt-${key}`} style={{fontWeight: 'bold', fontFamily: 'monospace'}}>{key}</dt>
           <dd key={`dd-${key}`} style={{marginLeft: '10px', fontFamily: 'monospace'}}>{displayValue}</dd>
