@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 
-const debug = false
-
 export function addLocations (node, currLocation=[0]) {
-  node.__location = currLocation
+  node.__location = currLocation.join('-')
   if (!node.Plans) {
     return
   }
@@ -13,7 +11,10 @@ export function addLocations (node, currLocation=[0]) {
 }
 
 function NodeDetails ({details}) {
-  return <div style={{backgroundColor: 'white', borderWidth: 1}}>
+  return <div style={{
+    backgroundColor: 'white',
+    borderWidth: 1
+    }}>
     <dl>
       {Object.entries(details).filter(([key]) => !key.startsWith('__')).map(([key, value]) => {
         return <>
@@ -28,11 +29,8 @@ function NodeDetails ({details}) {
 function Node ({ node, annotations }) {
   const { Plans, ...rest } = node
   const style = {
-    padding: '8px 32px',
-    fontFamily: 'sans-serif'
-  }
-  if (debug) {
-    style.borderWidth = 1
+    fontFamily: 'sans-serif',
+    borderWidth: 1
   }
 
   const [ expanded, expand ] = useState(false)
@@ -53,10 +51,61 @@ function Node ({ node, annotations }) {
           return <div key={index}>{a}</div>
         })}
       </div>
-      <div>
+      <NodeChildren>
         {Plans && Plans.map((p, index) => {
-          return <Node key={index} node={p} annotations={annotations} />
+          return (
+            <ChildNode key={index} lastNode={index === Plans.length - 1}>
+              <Node node={p} annotations={annotations} />
+            </ChildNode>
+          )
         })}
+      </NodeChildren>
+    </div>
+  )
+}
+
+function NodeChildren ({children}) {
+  if (!React.Children.count(children)) {
+    return null
+  }
+  return (
+    <div style={{
+      marginLeft: '12px'
+    }}>
+      <div style={{
+        borderLeft: '1px solid',
+        borderColor: 'black',
+        height: '20px',
+        }} />
+      {children}
+    </div>
+  )
+}
+
+function ChildNode ({children, lastNode}) {
+  return (
+    <div style={{
+      paddingBottom: '8px',
+      display: 'flex'
+    }}>
+      <div>
+        <div style={{
+          borderLeft: '1px solid',
+          borderBottom: '1px solid',
+          borderColor: 'black',
+          borderBottomLeftRadius: lastNode ? '5px' : undefined,
+          height: '20px',
+          width: '20px',
+        }} />
+        {lastNode ? null : <div style={{
+          borderLeft: '1px solid',
+          borderColor: 'black',
+          height: '100%'
+        }}/>}
+      </div>
+      <div style={{
+      }}>
+        {children}
       </div>
     </div>
   )
