@@ -2,7 +2,7 @@ import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 
-import { Explain } from '../src/components/Explain'
+import { Explain, ExplainPlanOverview } from '../src/components/Explain'
 import { addLocations } from '../src/components/Explain'
 import { findMostExpensiveByCost } from '../src/lib/analyze'
 
@@ -278,6 +278,6 @@ Object.entries(plans).forEach(([name, plan]) => {
   stories.add(`${name}`, () => {
     addLocations(plan[0].Plan)
     const annotations = findMostExpensiveByCost(plan)
-    return <Explain plan={plan} annotations={annotations} />
+    return <ExplainPlanOverview plan={plan} annotations={annotations} />
   })
 })
