@@ -1,5 +1,4 @@
-
-function selfCost(node) {
+export function selfCost(node) {
   return node['Total Cost'] - (node['Plans'] || []).map(p => p['Total Cost']).reduce((totCost, currCost) => totCost + currCost, 0)
 }
 
@@ -13,7 +12,7 @@ function flattenNodes(node) {
   return result
 }
 
-export function findMostExpensiveByCost (plan) {
+export function findMostExpensiveByCost(plan) {
   const rootNode = plan[0]['Plan']
   const nodes = flattenNodes(rootNode)
   

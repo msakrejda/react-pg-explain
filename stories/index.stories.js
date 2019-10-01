@@ -2,7 +2,7 @@ import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 
-import { Explain, ExplainPlanOverview } from '../src/components/Explain'
+import { ExplainPlanOverview } from '../src/components/Explain'
 import { addLocations } from '../src/components/Explain'
 import { findMostExpensiveByCost } from '../src/lib/analyze'
 

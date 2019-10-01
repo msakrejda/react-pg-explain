@@ -14,20 +14,26 @@ export function addLocations (node, currLocation=[0]) {
 //const [ expanded, expand ] = useState(false)
 //const toggleExpand = () => expand(expanded => !expanded)
 
+function RelationInfo ({ node }) {
+  const relName = node['Relation Name']
+  const relSchema = node['Schema']
+  const relAlias = node['Alias']
+  const relColor = 'darkolivegreen'
+  const schemaColor = relColor
+  const aliasColor = relColor
+  const title = `on ${relSchema}.${relName} AS ${relAlias}`
+  return relName ? (
+    <div style={{fontSize: '0.8rem', paddingLeft: '12px', textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden'}} title={title}>
+      on <span style={{color: schemaColor}}>{relSchema}</span>.<span style={{color: relColor}}>{relName}</span> AS <span style={{color: aliasColor}}>{relAlias}</span>
+    </div>
+  ) : null
+}
+
 function Node ({ node, annotations, onNodeClick }) {
   const { Plans, ...rest } = node
 
   const myAnnotations = annotations[node.__location] || []
   const nodeType = rest['Node Type']
-
-  const relName = rest['Relation Name']
-  const relSchema = rest['Schema']
-  const relAlias = rest['Alias']
-  const relInfo = relName && (
-    <div style={{fontSize: '0.8rem', paddingLeft: '12px', textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden'}} title={nodeType}>
-      on <span style={{color: 'green'}}>{relSchema}</span>.<span style={{color: 'green'}}>{relName}</span> AS <span style={{color: 'blue'}}>{relAlias}</span>
-    </div>
-  )
 
   const handleNodeClick = () => {
     onNodeClick(node)
@@ -47,7 +53,7 @@ function Node ({ node, annotations, onNodeClick }) {
         padding: '4px'
         }}>
         <div style={{fontWeight: 'bold', textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden'}} title={nodeType}>{nodeType}</div>
-        {relInfo}
+        <RelationInfo node={node} />
         <div>cost: {rest['Startup Cost']}...{rest['Total Cost']}</div>
         {myAnnotations.map((a, index) => {
           return <div key={index}>{a}</div>
