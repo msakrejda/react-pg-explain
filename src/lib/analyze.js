@@ -1,5 +1,13 @@
+import React from 'react'
+
 export function selfCost(node) {
   return node['Total Cost'] - (node['Plans'] || []).map(p => p['Total Cost']).reduce((totCost, currCost) => totCost + currCost, 0)
+}
+
+function Badge({children}) {
+  return <span style={{ paddingLeft: 2, paddingRight: 2, borderRadius: 3, fontSize: '0.6rem', fontWeight: 'bold', color: 'white', backgroundColor: 'red'}}>
+    {children}
+  </span>
 }
 
 function flattenNodes(node) {
@@ -31,6 +39,8 @@ export function findMostExpensiveByCost(plan) {
   })
 
   return {
-    [mostExpensive.node.__location]: [ `this is expensive: ${mostExpensive.cost}` ]
+    [mostExpensive.node.__location]: [
+      { badge: <Badge>costliest</Badge>, detail: `this is the most expensive node in this plan (cost ${mostExpensive.cost})` }
+    ]
   }
 }

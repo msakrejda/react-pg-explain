@@ -10,10 +10,6 @@ export function addLocations (node, currLocation=[0]) {
   })
 }
 
-// bring back to Node for expanding children
-//const [ expanded, expand ] = useState(false)
-//const toggleExpand = () => expand(expanded => !expanded)
-
 function RelationInfo ({ node }) {
   const relName = node['Relation Name']
   const relSchema = node['Schema']
@@ -29,11 +25,23 @@ function RelationInfo ({ node }) {
   ) : null
 }
 
+function NodeHeading ({ node }) {
+  const nodeType = node['Node Type']
+  return <div style={{fontWeight: 'bold', textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden'}} title={nodeType}>{nodeType}</div>
+}
+
+function NodeAnnotations ({ annotations }) {
+  return annotations.map((annotation, index) => {
+    return <div key={index}>{annotation.badge}</div>
+  })
+}
+
+const nodeLineColor = '#512903'
+
 function Node ({ node, annotations, onNodeClick }) {
   const { Plans, ...rest } = node
 
   const myAnnotations = annotations[node.__location] || []
-  const nodeType = rest['Node Type']
 
   const handleNodeClick = () => {
     onNodeClick(node)
@@ -46,18 +54,17 @@ function Node ({ node, annotations, onNodeClick }) {
       <div onClick={handleNodeClick} style={{
         borderWidth: 1,
         borderStyle: 'solid',
-        borderColor: 'brown',
+        borderColor: nodeLineColor,
         borderRadius: '5px',
         backgroundColor: 'snow',
+        color: nodeLineColor,
         maxWidth: 300,
         padding: '4px'
         }}>
-        <div style={{fontWeight: 'bold', textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden'}} title={nodeType}>{nodeType}</div>
+        <NodeHeading node={node} />
         <RelationInfo node={node} />
+        <NodeAnnotations annotations={myAnnotations} />
         <div>cost: {rest['Startup Cost']}...{rest['Total Cost']}</div>
-        {myAnnotations.map((a, index) => {
-          return <div key={index}>{a}</div>
-        })}
       </div>
       <NodeChildren>
         {Plans && Plans.map((p, index) => {
@@ -73,19 +80,33 @@ function Node ({ node, annotations, onNodeClick }) {
 }
 
 function NodeChildren ({children}) {
+  const [ expanded, expand ] = useState(true)
+  const toggleExpand = () => expand(expanded => !expanded)
+
   if (!React.Children.count(children)) {
     return null
   }
+
   return (
     <div style={{
-      marginLeft: '12px'
+      marginLeft: '18px'
     }}>
       <div style={{
         borderLeft: '1px solid',
-        borderColor: 'black',
-        height: '20px',
+        borderColor: nodeLineColor,
+        height: '12px',
         }} />
-      {children}
+      <span style={{
+        border: '1px solid',
+        color: nodeLineColor,
+        borderColor: nodeLineColor,
+        marginLeft: '-6px',
+        borderRadius: '2px',
+        cursor: 'pointer'
+      }}
+        title={`${expanded ? 'collapse' : 'expand'} children`}
+        onClick={toggleExpand}>{expanded ? '−' : '+'}</span>
+      {expanded && children}
     </div>
   )
 }
@@ -100,14 +121,14 @@ function ChildNode ({children, lastNode}) {
         <div style={{
           borderLeft: '1px solid',
           borderBottom: '1px solid',
-          borderColor: 'black',
+          borderColor: nodeLineColor,
           borderBottomLeftRadius: lastNode ? '5px' : undefined,
           height: '20px',
           width: '20px',
         }} />
         {lastNode ? null : <div style={{
           borderLeft: '1px solid',
-          borderColor: 'black',
+          borderColor: nodeLineColor,
           height: '100%'
         }}/>}
       </div>
@@ -119,9 +140,9 @@ function ChildNode ({children, lastNode}) {
   )
 }
 
-export function Explain ({plan, annotations, onNodeClick}) {
+export function Explain ({plan, annotations, onNodeClick, style}) {
   return (
-    <div style={{position: 'relative', overflow: 'scroll'}}>
+    <div style={{position: 'relative', overflow: 'scroll', ...style}}>
       <Node node={plan[0].Plan} annotations={annotations} onNodeClick={onNodeClick} />
     </div>
   )
@@ -133,35 +154,52 @@ export function ExplainPlanOverview ({plan, annotations}) {
     setSelectedNode(node)
   }
   const { Plans, ...nodeDetails } = selectedNode
+  const nodeAnnotations = annotations[selectedNode.__location] || []
 
   return (
     <div style={{display: 'flex'}}>
-      <Explain plan={plan} annotations={annotations} onNodeClick={handleNodeClick} />
-      <div>
-        <NodeDetails details={nodeDetails} />
-      </div>
+      <Explain style={{flexGrow: 1}} plan={plan} annotations={annotations} onNodeClick={handleNodeClick} />
+      <NodeDetails style={{flexGrow: 1}} node={nodeDetails} annotations={nodeAnnotations} />
     </div>
   )
 }
 
-function NodeDetails ({details}) {
-  return <div style={{
-    backgroundColor: 'white',
-    borderWidth: 1,
-    maxWidth: '300px'
-    }}>
-    <dl>
-      {Object.entries(details).filter(([key]) => !key.startsWith('__')).map(([key, value]) => {
-        const displayValue = Array.isArray(value)
-          ? value.join(', ')
-          : value === false || value === true
-          ? String(value)
-          : value
-        return <>
-          <dt key={`dt-${key}`} style={{fontWeight: 'bold', fontFamily: 'monospace'}}>{key}</dt>
-          <dd key={`dd-${key}`} style={{marginLeft: '10px', fontFamily: 'monospace'}}>{displayValue}</dd>
-        </>
-      })}
-    </dl>
-  </div>
+function NodeDetails ({node, style, annotations}) {
+  return (
+    <div>
+      <NodeHeading node={node} />
+      <RelationInfo node={node} />
+      <div style={{
+        backgroundColor: 'white',
+        borderWidth: 1,
+        width: '500px',
+        ...style
+        }}>
+        {annotations.length > 0 && (
+          <div>
+            Analysis:
+            <ul>
+              {annotations.map(a => {
+                return <li>{a.detail}</li>
+              })}
+            </ul>
+          </div>
+        )}
+        Details:
+        <dl>
+          {Object.entries(node).filter(([key]) => !key.startsWith('__')).map(([key, value]) => {
+            const displayValue = Array.isArray(value)
+              ? value.join(', ')
+              : value === false || value === true
+              ? String(value)
+              : value
+            return <>
+              <dt key={`dt-${key}`} style={{fontWeight: 'bold', fontFamily: 'monospace'}}>{key}</dt>
+              <dd key={`dd-${key}`} style={{marginLeft: '10px', fontFamily: 'monospace'}}>{displayValue}</dd>
+            </>
+          })}
+        </dl>
+      </div>
+    </div>
+  )
 }
